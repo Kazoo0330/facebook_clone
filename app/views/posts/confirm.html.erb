@@ -1,0 +1,12 @@
+<h3>Are you sure?</h3>
+
+<%= form_with(model: @post, url: posts_path, local: true) do |form| %>
+  <%= form.hidden_field :title %>
+  <%= form.hidden_field :content %>
+  <%= form.hidden_field :image %>
+
+  <p>タイトル:<%= @post.title %></p>
+  <p>本文:<%= @post.content %></p>
+  <p>Image:<%= image_tag @post.image.url.to_s %></p>
+  <%= form.submit  "登録する" %>
+<% end %>
