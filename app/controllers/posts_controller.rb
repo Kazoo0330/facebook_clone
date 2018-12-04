@@ -77,7 +77,12 @@ class PostsController < ApplicationController
     end
 
     def correct_user
-      unless current_user.id == @post.user_id
+      if logged_in?
+        unless current_user.id == @post.user_id
+          flash[:danger] = "権限がありません"
+          redirect_to(posts_path)
+        end
+      else
         flash[:danger] = "Please log in."
         redirect_to(posts_path)
       end
