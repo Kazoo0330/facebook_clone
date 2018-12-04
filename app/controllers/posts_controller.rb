@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :current_user, only: [:edit, :update, :new, :create, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
   # GET /posts
   # GET /posts.json
   def index
@@ -74,5 +74,12 @@ class PostsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
       params.require(:post).permit(:title, :content, :image, :image_chace)
+    end
+
+    def correct_user
+      unless current_user.id == @post.user_id
+        flash[:danger] = "Please log in."
+        redirect_to(posts_path)
+      end
     end
 end
