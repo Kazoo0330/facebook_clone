@@ -3,11 +3,11 @@ ok- Ruby on Railsを使ったアプリケーションであること
 - HTML,CSS,bootstrapを使用して、現実のFacebookに似せたデザインにすること（任意
 詳しくは後述）
 
-- pictureの投稿・投稿確認・編集・一覧表示・削除機能があること
+おk pictureの投稿・投稿確認・編集・一覧表示・削除機能があること
 
 ok ログイン機能があること
 
-- UserとPictureをひも付けて誰がPictureを投稿したか分かるようにすること
+おk UserとPictureをひも付けて誰がPictureを投稿したか分かるようにすること
 
 ok 画像と文章が投稿できるようにすること
 
