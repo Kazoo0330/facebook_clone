@@ -3,7 +3,7 @@
   <head>
     <title>FacebookClone</title>
     <%= csrf_meta_tags %>
-
+    <meta name="viewport" content="width=device-width">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -25,12 +25,12 @@
     </ul>
   </header>
 
-  <content class="content">
+  <div class="container">
     <% flash.each do |key, value| %>
       <%= content_tag(:div, value, class: "#{key}") %>
     <% end %>
     <%= yield %>
-  </content>
+  </div>
 
   <footer class="footer">
     <p>Facebook clone</p>
