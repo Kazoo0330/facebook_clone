@@ -21,7 +21,6 @@
         <td><%= post.title %></td>
         <td><%= post.content %></td>
         <td><%= image_tag post.image.url.to_s %></td>
-        <!-- あとでサムネイル表示とshowへのリンクに変更予定 -->
         <td><%= link_to 'Show', post %></td>
         <% if logged_in? %>
           <td><%= link_to 'Edit', edit_post_path(post) %></td>

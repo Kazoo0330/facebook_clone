@@ -3,9 +3,11 @@ class ImageUploader < CarrierWave::Uploader::Base
   # include CarrierWave::RMagick
 
 # サムネイル表示？
-  # include CarrierWave::MiniMagick
+ include CarrierWave::MiniMagick
+   process resize_to_limit: [200, 200]
+
   #   version :thumb do
-  #     process :resize_to_fill => [50, 50]
+  #       process resize_to_limit: [50, 50]
   #   end
 
 
