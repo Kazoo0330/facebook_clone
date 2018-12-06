@@ -1,20 +1,16 @@
-table .aaa {
-  border-style: solid;
-  border-width: 1px;
-  text-align: center;
-  padding: 10px;
-}
-
-
-
-
  html {
    height: 100%;
    background-color: #fff;
  }
 
- .wrapper{
-  height: 100%;
+ body {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 50px;
+ }
+
+ .wrapper {
+   background-color: #EFF1F3;
  }
 
 a {
@@ -22,56 +18,78 @@ a {
 }
 
 li{
-  list-style: none;
+  list-style: none
 }
- // .content {
- //   width: 100%;
- //   height: 100%;
- // }
 
- // .container {
- //   width: 100%;
- //   min-height: 100%;
- //   position: relative;
- // }
-
- .header {
-   // position: absolute;
+ div .container {
    width: 100%;
+   min-height: 100%;
+   position: relative;
+   padding-bottom: 5px;
+ }
+
+ .container-fluid {
    background-color: #3B5998;
-   height: 50px;
-   // top: 0;
  }
 
-  .header p {
-    float: left;
-    display: block;
-    padding: 15px;
-    font-size: 2.5rem;
-  }
-
-  .header p a {
-    color: white;
-  }
-
- .header li {
-  width: auto;
-  text-align: center;
-  float: right;
+ .nav {
+   float: right;
  }
 
- .header li a {
-   display: block;
-   padding: 15px;
+ .navbar-default .navbar-brand {
    color: white;
  }
 
+ .navbar-default .navbar-nav li a{
+   color: white;
+ }
+
+.row ul {
+  background-color: #ffffff
+}
+
+ ul.col-xs-12.col-md-5.post {
+    margin-left: 1%;
+  }
+
+ .post {
+   border-style: solid;
+   border-width: 2px;
+   padding: 10px;
+   height: 333px;
+ }
+
+ li {
+   word-wrap: break-word;
+
+ }
+
+ .aaa {
+   padding: 5px;
+ }
+
+ .row .btn-default {
+   position: absolute;
+   bottom: 5px;
+ }
+
+ .row .btn-info {
+   position: absolute;
+   bottom: 5px;
+   left: 85px;
+ }
+
+ .row .btn-danger {
+   position: absolute;
+   bottom: 5px;
+   left:148px
+ }
+
  .footer {
-   color: black;
    background-color: #3B5998;
    position: absolute;
    bottom: 0;
-   // margin-top: 50px;
+   margin-top: 50px;
    width: 100%;
    height: 50px;
  }
