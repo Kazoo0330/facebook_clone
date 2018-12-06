@@ -56,23 +56,23 @@ class PostsController < ApplicationController
   end
 
   private
-    def set_post
-      @post = Post.find(params[:id])
-    end
+  def set_post
+    @post = Post.find(params[:id])
+  end
 
-    def post_params
-      params.require(:post).permit(:title, :content, :image, :image_cache)
-    end
+  def post_params
+    params.require(:post).permit(:title, :content, :image, :image_cache)
+  end
 
-    def correct_user
-      if logged_in?
-        unless current_user.id == @post.user_id
-          flash[:danger] = "権限がありません"
-          redirect_to(posts_path)
-        end
-      else
-        flash[:danger] = "Please log in."
+  def correct_user
+    if logged_in?
+      unless current_user.id == @post.user_id
+        flash[:danger] = "権限がありません"
         redirect_to(posts_path)
       end
+    else
+      flash[:danger] = "Please log in."
+      redirect_to(posts_path)
     end
+  end
 end
